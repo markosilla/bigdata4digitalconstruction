@@ -1,0 +1,1805 @@
+[
+    {
+        "ehitis": {
+            "ehitiseKujud": {
+                "ruumikuju": [
+                    {
+                        "oper": "U",
+                        "adobId": "10659092",
+                        "adsOid": "EE03958778",
+                        "nahtus": "HOONE",
+                        "adsLiik": "EE",
+                        "ehit_id": "30301177",
+                        "ehrKood": "121363179",
+                        "kujuJnr": "1",
+                        "nimetus": "Korterelamu",
+                        "pindala": null,
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        529353.41,
+                                        6472439.97
+                                    ],
+                                    [
+                                        529354.09,
+                                        6472436.69
+                                    ],
+                                    [
+                                        529353.36,
+                                        6472436.54
+                                    ],
+                                    [
+                                        529353.91,
+                                        6472427.69
+                                    ],
+                                    [
+                                        529356.48,
+                                        6472415.33
+                                    ],
+                                    [
+                                        529370.78,
+                                        6472418.27
+                                    ],
+                                    [
+                                        529368.55,
+                                        6472429.03
+                                    ],
+                                    [
+                                        529369.19,
+                                        6472429.17
+                                    ],
+                                    [
+                                        529369.13,
+                                        6472429.45
+                                    ],
+                                    [
+                                        529369.81,
+                                        6472429.59
+                                    ],
+                                    [
+                                        529369.32,
+                                        6472431.89
+                                    ],
+                                    [
+                                        529368.65,
+                                        6472431.76
+                                    ],
+                                    [
+                                        529368.6,
+                                        6472432.03
+                                    ],
+                                    [
+                                        529367.96,
+                                        6472431.89
+                                    ],
+                                    [
+                                        529366.52,
+                                        6472438.8
+                                    ],
+                                    [
+                                        529367.18,
+                                        6472438.93
+                                    ],
+                                    [
+                                        529366.9,
+                                        6472440.25
+                                    ],
+                                    [
+                                        529366.25,
+                                        6472440.11
+                                    ],
+                                    [
+                                        529365.74,
+                                        6472442.54
+                                    ],
+                                    [
+                                        529353.41,
+                                        6472439.97
+                                    ]
+                                ]
+                            ]
+                        },
+                        "gis_kood": null,
+                        "kuju_liik": null,
+                        "nahtusTxt": "hoone",
+                        "mkm_joonis": null,
+                        "nliik_kood": null,
+                        "geometryTxt": "Geomeetria punktid on geomeetria objektis",
+                        "lahiaadress": "R\u00e4\u00e4ma tn 9",
+                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9",
+                        "viitepunktX": null,
+                        "viitepunktY": null,
+                        "date_updated": "2024-02-10T11:47:00.083",
+                        "geom_updated": "2021-10-12T09:39:38.000",
+                        "geometryType": "Geomeetria t\u00fc\u00fcp on geomeetria objektis",
+                        "ads_esitamine": "ADS_ESITATUD",
+                        "hoone_kuju_id": "29035405",
+                        "tyhistatud_kp": null,
+                        "geometryTypeTxt": "Geomeetria t\u00fc\u00fcp on geomeetria objektis",
+                        "sissepaasu_punkt": null,
+                        "kujuMoodustusviis": "M",
+                        "sissepaasupunktid": {
+                            "sissepaasupunkt": [
+                                {
+                                    "id": "23821993",
+                                    "nimi": "arvutatud kuju keskmesse",
+                                    "oper": "A",
+                                    "kuju_id": "29035405",
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            529361.46,
+                                            6472428.71
+                                        ]
+                                    },
+                                    "date_created": "2024-02-10T11:30:28.340",
+                                    "date_updated": "2024-02-10T11:30:28.340",
+                                    "viitepunkt_x": "6472428.71",
+                                    "viitepunkt_y": "529361.46",
+                                    "moodustusviis": "A",
+                                    "eh_sp_punkt_id": null
+                                }
+                            ]
+                        },
+                        "ehitiseKujuAadressid": {
+                            "aadress": [
+                                {
+                                    "id": "35812570",
+                                    "olek": "K",
+                                    "oper": "A",
+                                    "adrId": "3123608",
+                                    "tekst": null,
+                                    "aadr_id": "5433177",
+                                    "kuju_id": "29035405",
+                                    "olekTxt": "kehtiv",
+                                    "tase1_id": "7430901",
+                                    "tase2_id": "7430960",
+                                    "tase3_id": "11075485",
+                                    "tase4_id": null,
+                                    "tase5_id": "9848503",
+                                    "tase6_id": null,
+                                    "tase7_id": "10405192",
+                                    "tase8_id": null,
+                                    "tase1_kood": "68",
+                                    "tase2_kood": "624",
+                                    "koodaadress": "68624661900000SYQ0000BNJB00000000",
+                                    "lahiaadress": "R\u00e4\u00e4ma tn 9",
+                                    "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9",
+                                    "tase1_nimetus": "P\u00e4rnu maakond",
+                                    "tase2_nimetus": "P\u00e4rnu linn",
+                                    "tase3_nimetus": "P\u00e4rnu linn",
+                                    "tase4_nimetus": null,
+                                    "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                    "tase6_nimetus": null,
+                                    "tase7_nimetus": "9",
+                                    "tase8_nimetus": null,
+                                    "aadressTekstina": null
+                                }
+                            ]
+                        },
+                        "kujuMoodustusviisTxt": "m\u00f5\u00f5distatud"
+                    }
+                ]
+            },
+            "ehitiseAndmed": {
+                "url": "URL pole kasutusel",
+                "oper": "U",
+                "adsOid": "EE03958778",
+                "ehitId": "30301177",
+                "ehrKood": "121363179",
+                "nimetus": "Korterelamu",
+                "seisund": "EHITIS_SEISUND_OLEMA",
+                "kaosKood": "11222",
+                "markused": null,
+                "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                "seisundTxt": "Olemas",
+                "verTekkAeg": "2025-02-07T21:07:00.288",
+                "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9",
+                "rajatisHoone": "H",
+                "esmaneKasutus": "2023",
+                "kaosIdPeamine": "11222",
+                "katastriyksused": "katastriuksused on eraldi plokis",
+                "rajatishoonetxt": "hoone"
+            },
+            "ehitiseKehand": {
+                "kehand": [
+                    {
+                        "tekkeviis": "O",
+                        "kehandOper": "A",
+                        "ehitiseOsad": {
+                            "ehitiseOsa": [
+                                {
+                                    "id": "24213087",
+                                    "liik": "K",
+                                    "tahis": "2",
+                                    "adsOid": "ER03958779",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812574",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932653",
+                                        "ehos_id": "24213087",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10801035",
+                                        "ads_adr_id": "3617099",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKS0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-2",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-2",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "2"
+                                    },
+                                    "adob_id": "10393018",
+                                    "ehrKood": "121363179-3152821",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152821",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "80.5",
+                                        "kooginish": "1",
+                                        "tubadeArv": "2",
+                                        "koetavPind": "80.5",
+                                        "sissepaasuKorrus": "1"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213087",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213087",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1204",
+                                                "ehos_id": "24213087",
+                                                "nimetus": "saun",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213087",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213087",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213088",
+                                    "liik": "K",
+                                    "tahis": "4",
+                                    "adsOid": "ER03958780",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812576",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932654",
+                                        "ehos_id": "24213088",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10901185",
+                                        "ads_adr_id": "3617100",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKT0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-4",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-4",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "4"
+                                    },
+                                    "adob_id": "10393019",
+                                    "ehrKood": "121363179-3152824",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152824",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "41.9",
+                                        "kooginish": "1",
+                                        "tubadeArv": "2",
+                                        "koetavPind": "41.9",
+                                        "sissepaasuKorrus": "2"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213088",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213088",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213088",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213088",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213089",
+                                    "liik": "K",
+                                    "tahis": "6",
+                                    "adsOid": "ER03958787",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812578",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932652",
+                                        "ehos_id": "24213089",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10982470",
+                                        "ads_adr_id": "3617098",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKR0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-6",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-6",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "6"
+                                    },
+                                    "adob_id": "10393017",
+                                    "ehrKood": "121363179-3152828",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152828",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "65.7",
+                                        "kooginish": "1",
+                                        "tubadeArv": "3",
+                                        "koetavPind": "65.7",
+                                        "valipindadePind": "9.5",
+                                        "sissepaasuKorrus": "2"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213089",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213089",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1204",
+                                                "ehos_id": "24213089",
+                                                "nimetus": "saun",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213089",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213089",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213090",
+                                    "liik": "K",
+                                    "tahis": "3",
+                                    "adsOid": "ER03958784",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812575",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932658",
+                                        "ehos_id": "24213090",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "11059747",
+                                        "ads_adr_id": "3617104",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKX0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-3",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-3",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "3"
+                                    },
+                                    "adob_id": "10393023",
+                                    "ehrKood": "121363179-3152822",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152822",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "77.3",
+                                        "kooginish": "1",
+                                        "tubadeArv": "4",
+                                        "koetavPind": "77.3",
+                                        "sissepaasuKorrus": "1"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213090",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213090",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1204",
+                                                "ehos_id": "24213090",
+                                                "nimetus": "saun",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213090",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213090",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213091",
+                                    "liik": "K",
+                                    "tahis": "7",
+                                    "adsOid": "ER03958782",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812579",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932656",
+                                        "ehos_id": "24213091",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10971662",
+                                        "ads_adr_id": "3617102",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKV0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-7",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-7",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "7"
+                                    },
+                                    "adob_id": "10393021",
+                                    "ehrKood": "121363179-3152829",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152829",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "41.9",
+                                        "kooginish": "1",
+                                        "tubadeArv": "2",
+                                        "koetavPind": "41.9",
+                                        "valipindadePind": "10.6",
+                                        "sissepaasuKorrus": "3"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213091",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213091",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213091",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213091",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213092",
+                                    "liik": "K",
+                                    "tahis": "1",
+                                    "adsOid": "ER03958781",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812573",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932655",
+                                        "ehos_id": "24213092",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10680590",
+                                        "ads_adr_id": "3617101",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKU0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-1",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-1",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "1"
+                                    },
+                                    "adob_id": "10393020",
+                                    "ehrKood": "121363179-3152819",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152819",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "63.5",
+                                        "kooginish": "1",
+                                        "tubadeArv": "3",
+                                        "koetavPind": "63.5",
+                                        "sissepaasuKorrus": "1"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213092",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213092",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1204",
+                                                "ehos_id": "24213092",
+                                                "nimetus": "saun",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213092",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213092",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213093",
+                                    "liik": "K",
+                                    "tahis": "8",
+                                    "adsOid": "ER03958786",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812580",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932651",
+                                        "ehos_id": "24213093",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10972591",
+                                        "ads_adr_id": "3617097",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKQ0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-8",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-8",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "8"
+                                    },
+                                    "adob_id": "10393016",
+                                    "ehrKood": "121363179-3152830",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152830",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "60.6",
+                                        "kooginish": "1",
+                                        "tubadeArv": "3",
+                                        "koetavPind": "60.6",
+                                        "valipindadePind": "12.5",
+                                        "sissepaasuKorrus": "3"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213093",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213093",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213093",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213093",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213094",
+                                    "liik": "K",
+                                    "tahis": "5",
+                                    "adsOid": "ER03958785",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812577",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932659",
+                                        "ehos_id": "24213094",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10739953",
+                                        "ads_adr_id": "3617105",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKY0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-5",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-5",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "5"
+                                    },
+                                    "adob_id": "10393024",
+                                    "ehrKood": "121363179-3152827",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152827",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "60.6",
+                                        "kooginish": "1",
+                                        "tubadeArv": "3",
+                                        "koetavPind": "60.6",
+                                        "sissepaasuKorrus": "2"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213094",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213094",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213094",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213094",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "24213095",
+                                    "liik": "K",
+                                    "tahis": "9",
+                                    "adsOid": "ER03958783",
+                                    "kaosId": "11222",
+                                    "aadress": {
+                                        "id": "35812572",
+                                        "olek": "K",
+                                        "oper": "A",
+                                        "tekst": null,
+                                        "aadr_id": "5932657",
+                                        "ehos_id": "24213095",
+                                        "kuju_id": null,
+                                        "olekTxt": "kehtiv",
+                                        "tase1_id": "7430901",
+                                        "tase2_id": "7430960",
+                                        "tase3_id": "11075485",
+                                        "tase4_id": null,
+                                        "tase5_id": "9848503",
+                                        "tase6_id": null,
+                                        "tase7_id": "10405192",
+                                        "tase8_id": "10803023",
+                                        "ads_adr_id": "3617103",
+                                        "tase1_kood": "68",
+                                        "tase2_kood": "624",
+                                        "koodaadress": "68624661900000SYQ0000BNJBKWKW0000",
+                                        "lahiaadress": "R\u00e4\u00e4ma tn 9-9",
+                                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9-9",
+                                        "tase1_nimetus": "P\u00e4rnu maakond",
+                                        "tase2_nimetus": "P\u00e4rnu linn",
+                                        "tase3_nimetus": "P\u00e4rnu linn",
+                                        "tase4_nimetus": null,
+                                        "tase5_nimetus": "R\u00e4\u00e4ma tn",
+                                        "tase6_nimetus": null,
+                                        "tase7_nimetus": "9",
+                                        "tase8_nimetus": "9"
+                                    },
+                                    "adob_id": "10393022",
+                                    "ehrKood": "121363179-3152831",
+                                    "liikTxt": "Korter",
+                                    "nimetus": null,
+                                    "osaOper": "A",
+                                    "spun_id": "23821993",
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3152831",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-02-10T11:30:28.354",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": "ADS_ESITATUD",
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "65.7",
+                                        "kooginish": "1",
+                                        "tubadeArv": "3",
+                                        "koetavPind": "65.7",
+                                        "valipindadePind": "31.5",
+                                        "sissepaasuKorrus": "3"
+                                    },
+                                    "ehitiseOsaTehnilisedNaitajad": {
+                                        "tehnilineNaitaja": [
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "30",
+                                                "klKood": "TEHNO_GAASIPAIGALDIS",
+                                                "tenaId": "2901",
+                                                "ehos_id": "24213095",
+                                                "nimetus": "puudub",
+                                                "klNimetus": "Gaasipaigaldise olemasolu",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "40",
+                                                "klKood": "TEHNO_SOOJAVLIIK",
+                                                "tenaId": "2403",
+                                                "ehos_id": "24213095",
+                                                "nimetus": "kaugk\u00fcte",
+                                                "klNimetus": "Soojusvarustuse liik",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "10",
+                                                "klKood": "TEHNO_WC",
+                                                "tenaId": "2002",
+                                                "ehos_id": "24213095",
+                                                "nimetus": "vesiklosett",
+                                                "klNimetus": "Info tualettide kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1203",
+                                                "ehos_id": "24213095",
+                                                "nimetus": "vann/du\u0161\u0161",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            },
+                                            {
+                                                "oper": "A",
+                                                "jrkNr": "20",
+                                                "klKood": "TEHNO_OPESU",
+                                                "tenaId": "1204",
+                                                "ehos_id": "24213095",
+                                                "nimetus": "saun",
+                                                "klNimetus": "Info pesemisv\u00f5imaluse kohta",
+                                                "lisavaartus": null
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "25434012",
+                                    "liik": "T",
+                                    "tahis": null,
+                                    "adsOid": null,
+                                    "kaosId": "11222",
+                                    "adob_id": null,
+                                    "ehrKood": "121363179-3781238",
+                                    "liikTxt": null,
+                                    "nimetus": "Tehnopind - ala",
+                                    "osaOper": "I",
+                                    "spun_id": null,
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3781238",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-05-30T19:54:09.666",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": null,
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "9.1"
+                                    }
+                                },
+                                {
+                                    "id": "25465438",
+                                    "liik": "Y",
+                                    "tahis": null,
+                                    "adsOid": null,
+                                    "kaosId": "11222",
+                                    "adob_id": null,
+                                    "ehrKood": "121363179-3812664",
+                                    "liikTxt": null,
+                                    "nimetus": "\u00dcldkasutatav ala",
+                                    "osaOper": "I",
+                                    "spun_id": null,
+                                    "kaosKood": "11222",
+                                    "markused": null,
+                                    "osa_kood": "3812664",
+                                    "dokumendil": "J",
+                                    "osaUpdated": "2024-05-30T19:54:09.666",
+                                    "kaosNimetus": "Muu kolme v\u00f5i enama korteriga elamu",
+                                    "ads_esitamine": null,
+                                    "ehitiseOsaPohiandmed": {
+                                        "pind": "83.2"
+                                    }
+                                }
+                            ]
+                        },
+                        "hoone_kuju_id": "29035405",
+                        "kehandUpdated": "2024-02-10T11:30:28.347",
+                        "esmane_kasutus": null,
+                        "do_ehitis_kehand_id": "11968989"
+                    }
+                ]
+            },
+            "ehitiseAadressid": {
+                "aadress": [
+                    {
+                        "oper": "A",
+                        "adrId": "3123608",
+                        "olekviit": {
+                            "olek": "K",
+                            "olekTxt": "kehtiv"
+                        },
+                        "koodaadress": "68624661900000SYQ0000BNJB00000000",
+                        "lahiaadress": "R\u00e4\u00e4ma tn 9",
+                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9",
+                        "aadressTekstina": null
+                    }
+                ]
+            },
+            "ehitisePohiandmed": {
+                "maht": "2584.0",
+                "laius": "14.8",
+                "korgus": "11.0",
+                "pikkus": "24.8",
+                "maakond": "68",
+                "sygavus": "0.0",
+                "kinavald": null,
+                "ehAlustKp": null,
+                "mahtBruto": "2584.0",
+                "oletuslik": "0",
+                "abs0Korgus": "13.9",
+                "koetavPind": "650.0",
+                "omandiLiik": "EHITIS_OMANDI_LIIK_KINNIS",
+                "omavalitsus": "624",
+                "kavKasutusKp": "2023-01-01T00:00:00.000",
+                "omandiLiikTxt": "kinnisasi",
+                "vetteEhitatud": null,
+                "yldkasut_pind": "83.2",
+                "abiruumidePind": "9.1",
+                "ajehKasutalgKp": null,
+                "maxKorrusteArv": "3",
+                "ajehKasutloppKp": null,
+                "ehitisalunePind": "356.0",
+                "suletud_netopind": "650.0",
+                "soltumatuVallasAsi": null,
+                "maaalusteKorrusteArv": "0",
+                "ehitisaluneMaapealnePind": "356.0"
+            },
+            "ehitiseEnergiamargised": {
+                "energiamargis": [
+                    {
+                        "aadrId": 0,
+                        "dok_nr": "2111569/02573",
+                        "dokLiik": "Registrisse kandmata hoone energiaarvutusel p\u00f5hinev energiam\u00e4rgise teatis",
+                        "seisund": "DO_DOKUSEIS_KEHTIV",
+                        "etaKekVal": "104",
+                        "hooneLiik": null,
+                        "rekoAasta": null,
+                        "ehEhitisId": "30301177",
+                        "etaKekType": "ETA",
+                        "koetavPind": 0,
+                        "kommentaar": "",
+                        "ehEnergiaid": "2606369",
+                        "taisaadress": "",
+                        "energiaKlass": "A",
+                        "hooneLiikTxt": null,
+                        "korteriteArv": 0,
+                        "energiaDokuId": "106172035",
+                        "energiatehnad": {
+                            "energiatehna": [
+                                {
+                                    "tenaId": "50",
+                                    "tenaTxt": "kaugk\u00fcte",
+                                    "lisavaartus": null,
+                                    "do_energia_id": "2606369"
+                                },
+                                {
+                                    "tenaId": "52",
+                                    "tenaTxt": "soe vesi",
+                                    "lisavaartus": null,
+                                    "do_energia_id": "2606369"
+                                }
+                            ]
+                        },
+                        "esmaneKasutus": 0,
+                        "kaosIdPeamine": 0,
+                        "energiaTellija": "Promenaadi Kodud O\u00dc",
+                        "energiaMargiseKp": null,
+                        "energiaValjastKp": "2021-06-30T08:45:35.000",
+                        "energiakasutused": {
+                            "energiaKandja": [
+                                {
+                                    "id": "2355111",
+                                    "total": null,
+                                    "tarnEn": "18398",
+                                    "tarnEnKK": null,
+                                    "kytteLiik": null,
+                                    "kytteTyyp": "ENT_ELEKTER",
+                                    "kytteLiikTxt": null,
+                                    "kytteTyypTxt": "elekter",
+                                    "tarnEnKKYhik": null,
+                                    "do_energia_id": "2606369",
+                                    "erikasutusMuu": null,
+                                    "eksportEnergia": "5394",
+                                    "erikasutusKokku": "20.01",
+                                    "tarnEnKKYhikTxt": null,
+                                    "lokaalseTaastuvenergiaSysteemid": {
+                                        "lokaalseTaastuvenergiaSysteem": {
+                                            "energiaTaastuvSys": "ENSY_PAIKESEPANEEL",
+                                            "do_energiakandja_id": "2355111",
+                                            "energiaTaastuvSysTxt": "p\u00e4ikesepaneel"
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "2355112",
+                                    "total": null,
+                                    "tarnEn": "47339",
+                                    "tarnEnKK": null,
+                                    "kytteLiik": null,
+                                    "kytteTyyp": "ENT_KAUGKYTE",
+                                    "kytteLiikTxt": null,
+                                    "kytteTyypTxt": "kaugk\u00fcte",
+                                    "tarnEnKKYhik": null,
+                                    "do_energia_id": "2606369",
+                                    "erikasutusMuu": null,
+                                    "eksportEnergia": null,
+                                    "erikasutusKokku": "72.83",
+                                    "tarnEnKKYhikTxt": null
+                                }
+                            ]
+                        },
+                        "kaosIdPeamineTxt": null,
+                        "energiaInfoAllikas": "Eelprojekti projektdokumentatsioon",
+                        "energiaKaalKasutus": null,
+                        "energiaValjastNimi": "",
+                        "do_ehitis_kehand_id": 0,
+                        "energiaKehtibKuniKp": null,
+                        "energiamargiseUlatus": null,
+                        "energiaValjastRegkood": "10199965"
+                    }
+                ]
+            },
+            "ehitiseKatastriyksused": {
+                "ehitiseKatastriyksus": [
+                    {
+                        "id": "31741052",
+                        "olek": "K",
+                        "oper": "A",
+                        "adob_id": 8772086,
+                        "ads_oid": "CU00338017",
+                        "kayk_id": "3926747",
+                        "kontrKp": null,
+                        "lahiaadress": "R\u00e4\u00e4ma tn 9",
+                        "taisaadress": "P\u00e4rnu maakond, P\u00e4rnu linn, P\u00e4rnu linn, R\u00e4\u00e4ma tn 9",
+                        "katastritunnus": "62507:005:0001",
+                        "seostamiseViis": "K"
+                    }
+                ]
+            },
+            "ehitiseKasutusotstarbed": {
+                "kasutusotstarve": [
+                    {
+                        "oper": "A",
+                        "kaosId": "11222",
+                        "ehos_id": null,
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": "557.7",
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "25434012",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "25465438",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213095",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213094",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213093",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213092",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213091",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213090",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213089",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213088",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    },
+                    {
+                        "oper": "I",
+                        "kaosId": "11222",
+                        "ehos_id": "24213087",
+                        "kaosKood": "11222",
+                        "kaosIdTxt": "Muu kolme v\u00f5i enama korteriga elamu",
+                        "eluruumidePind": null,
+                        "mitteeluruumidePind": null
+                    }
+                ]
+            },
+            "ehitiseEnergiamargisedV3": {
+                "energiamargis": [
+                    {
+                        "dokNr": "2111569/02573",
+                        "dotyId": "11569",
+                        "osaKood": [
+                            9220253,
+                            9220255,
+                            9239131,
+                            9346436,
+                            9357466,
+                            9473098,
+                            9507333,
+                            9546413,
+                            9554521,
+                            9591397,
+                            9591425,
+                            9591453,
+                            9591481,
+                            9591530,
+                            9669487,
+                            9690693,
+                            21516547,
+                            22335493,
+                            22467396,
+                            22589876,
+                            22677293,
+                            22735518,
+                            22743789,
+                            22749518,
+                            23962779,
+                            24213092
+                        ],
+                        "etaKekVal": "104",
+                        "onOsaline": false,
+                        "dokNimetus": "Registrisse kandmata hoone energiaarvutusel p\u00f5hinev energiam\u00e4rgise teatis",
+                        "dokSeisund": "DO_DOKUSEIS_KEHTIV",
+                        "enMargisId": "2606369",
+                        "etaKekType": "ETA",
+                        "energiaKlass": "ENERGIAKL_A",
+                        "enrgiaDokuId": "106172035",
+                        "energiaMargiseKp": null,
+                        "energiaValjastKp": "2021-06-30T08:45:35.000",
+                        "energiaKaalKasutus": null,
+                        "energiaKehtibKuniKp": null,
+                        "energiamargiseUlatus": null,
+                        "energiaValjastRegkood": "10199965",
+                        "energiaValjastAsutusId": "4546194"
+                    }
+                ]
+            },
+            "ehitiseTehnilisedNaitajad": {
+                "tehnilineNaitaja": [
+                    {
+                        "oper": "A",
+                        "jrkNr": "0",
+                        "klKood": "KONS_VUND",
+                        "tenaId": "104",
+                        "nimetus": "vaivundament",
+                        "klNimetus": "Vundamendi liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "1",
+                        "klKood": "KONS_KKONSTR",
+                        "tenaId": "212",
+                        "nimetus": "monoliitne raudbetoon",
+                        "klNimetus": "Kande- ja j\u00e4igastavate konstruktsioonide materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "1",
+                        "klKood": "KONS_KKONSTR",
+                        "tenaId": "213",
+                        "nimetus": "monteeritav raudbetoon",
+                        "klNimetus": "Kande- ja j\u00e4igastavate konstruktsioonide materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "1",
+                        "klKood": "KONS_KKONSTR",
+                        "tenaId": "217",
+                        "nimetus": "v\u00e4ike- v\u00f5i suurplokk, n\u00e4iteks vaht, mull, kergkruus, k\u00e4rg, betoon",
+                        "klNimetus": "Kande- ja j\u00e4igastavate konstruktsioonide materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "3",
+                        "klKood": "KONS_VALISV",
+                        "tenaId": "709",
+                        "nimetus": "puit (vooder)",
+                        "klNimetus": "V\u00e4lisseina v\u00e4lisviimistluse materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "3",
+                        "klKood": "KONS_VALISV",
+                        "tenaId": "712",
+                        "nimetus": "fassaadiplaat (seal hulgas tsementkiudplaat)",
+                        "klNimetus": "V\u00e4lisseina v\u00e4lisviimistluse materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "3",
+                        "klKood": "KONS_VALISV",
+                        "tenaId": "703",
+                        "nimetus": "krohv",
+                        "klNimetus": "V\u00e4lisseina v\u00e4lisviimistluse materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "4",
+                        "klKood": "KONS_VSEIN",
+                        "tenaId": "508",
+                        "nimetus": "v\u00e4ike- v\u00f5i suurplokk (vaht, mull, kergkruus, k\u00e4rg, betoon jms)",
+                        "klNimetus": "V\u00e4lisseina liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "5",
+                        "klKood": "KONS_SARIKAD",
+                        "tenaId": "905",
+                        "nimetus": "monoliitne raudbetoon",
+                        "klNimetus": "Katuste ja katuselagede kandva osa materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "5",
+                        "klKood": "KONS_SARIKAD",
+                        "tenaId": "906",
+                        "nimetus": "monteeritav raudbetoon",
+                        "klNimetus": "Katuste ja katuselagede kandva osa materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "6",
+                        "klKood": "KONS_VLAED",
+                        "tenaId": "405",
+                        "nimetus": "monoliitne raudbetoon",
+                        "klNimetus": "Vahelagede kandva osa materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "6",
+                        "klKood": "KONS_VLAED",
+                        "tenaId": "406",
+                        "nimetus": "monteeritav raudbetoon",
+                        "klNimetus": "Vahelagede kandva osa materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "7",
+                        "klKood": "KONS_KATUS",
+                        "tenaId": "609",
+                        "nimetus": "bituumen v\u00f5i  PVC  plaat v\u00f5i rullmaterjal",
+                        "klNimetus": "Katusekatte materjal",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "10",
+                        "klKood": "TEHNO_ELEKLIIK",
+                        "tenaId": "2303",
+                        "nimetus": "v\u00f5rk",
+                        "klNimetus": "Elektris\u00fcsteemi liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "20",
+                        "klKood": "TEHNO_VESI",
+                        "tenaId": "1103",
+                        "nimetus": "v\u00f5rk",
+                        "klNimetus": "Veevarustuse liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "30",
+                        "klKood": "TEHNO_KANAL",
+                        "tenaId": "1403",
+                        "nimetus": "v\u00f5rk",
+                        "klNimetus": "Kanalisatsiooni liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "40",
+                        "klKood": "TEHNO_SOOJAVLIIK",
+                        "tenaId": "2403",
+                        "nimetus": "kaugk\u00fcte",
+                        "klNimetus": "Soojusvarustuse liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "70",
+                        "klKood": "TEHNO_VENT",
+                        "tenaId": "2706",
+                        "nimetus": "soojustagastusega ventilatsioon",
+                        "klNimetus": "Ventilatsiooni liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "80",
+                        "klKood": "TEHNO_JAHUTUS",
+                        "tenaId": "2806",
+                        "nimetus": "lokaalne jahutus",
+                        "klNimetus": "Jahutuss\u00fcsteemi liik",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "90",
+                        "klKood": "TEHNO_GAAS",
+                        "tenaId": "1702",
+                        "nimetus": "puudub",
+                        "klNimetus": "V\u00f5rgu- v\u00f5i mahutigaasi olemasolu",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "50",
+                        "klKood": "TEHNO_SOOJUSA",
+                        "tenaId": "2502",
+                        "nimetus": "puudub",
+                        "klNimetus": "Soojusallikas",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "60",
+                        "klKood": "TEHNO_ENERGIA",
+                        "tenaId": "2602",
+                        "nimetus": "puudub",
+                        "klNimetus": "Energiakandja",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    },
+                    {
+                        "oper": "A",
+                        "jrkNr": "50",
+                        "klKood": "TEHNO_SOOJUSA",
+                        "tenaId": "2510",
+                        "nimetus": "kaugk\u00fcte",
+                        "klNimetus": "Soojusallikas",
+                        "eh_tehna_id": null,
+                        "lisavaartus": null
+                    }
+                ]
+            }
+        }
+    }
+]
