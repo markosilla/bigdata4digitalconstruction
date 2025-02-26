@@ -10,12 +10,13 @@ def extract_nested_values(data):
     ehitis = data[0].get("ehitis", {}) if isinstance(data, list) and len(data) > 0 else {}
 
     extracted_values = {
+        "filename": None,  
         "ehitiseKorgus": ehitis.get("ehitisePohiandmed", {}).get("korgus"),
         "ehitisePindala": ehitis.get("ehitisePohiandmed", {}).get("suletud_netopind"),
         "ehitiseMaht": ehitis.get("ehitisePohiandmed", {}).get("mahtBruto"),
         "ehitisalunePind": ehitis.get("ehitisePohiandmed", {}).get("ehitisalunePind"),
         "korgus": ehitis.get("ehitisePohiandmed", {}).get("korgus"),
-        "suletud_netopind": ehitis.get("ehitisePohiandmed", {}).get("suletud_netopind"),  # New field added
+        "suletud_netopind": ehitis.get("ehitisePohiandmed", {}).get("suletud_netopind"),
         "energiaKlass": None,
         "mahtBruto": ehitis.get("ehitisePohiandmed", {}).get("mahtBruto"),
         "maxKorrusteArv": ehitis.get("ehitisePohiandmed", {}).get("maxKorrusteArv"),
@@ -70,8 +71,8 @@ def extract_values_from_all_files(folder):
             file_path = os.path.join(folder, filename)
             with open(file_path, 'r', encoding='utf-8') as file:
                 data = json.load(file)
-                extracted_entry = {"filename": filename}
-                extracted_entry.update(extract_nested_values(data))
+                extracted_entry = extract_nested_values(data)
+                extracted_entry["filename"] = filename  # Add filename to the extracted data
                 extracted_data.append(extracted_entry)
 
     # Convert to a DataFrame for structured output
@@ -81,6 +82,6 @@ def extract_values_from_all_files(folder):
 # Run extraction
 df_result = extract_values_from_all_files(folder)
 
-# Display extracted data
+# Display extracted data in **comma-separated format** for easy copy-paste into Excel
 if df_result is not None:
-    print(df_result)
+    print(df_result.to_csv(index=False))  # Comma-separated output
