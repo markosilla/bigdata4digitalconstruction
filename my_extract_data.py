@@ -6,24 +6,20 @@ import pandas as pd
 folder = "ehr_files"
 
 def extract_nested_values(data):
-    """ Extract values from nested JSON fields with deep search for esmane_kasutus, address fields, and suletud_netopind. """
+    """ Extract values from nested JSON fields with deep search for esmane_kasutus and suletud_netopind. """
     ehitis = data[0].get("ehitis", {}) if isinstance(data, list) and len(data) > 0 else {}
 
     extracted_values = {
         "filename": None,  
-        "ehitiseKorgus": ehitis.get("ehitisePohiandmed", {}).get("korgus"),
         "ehitisePindala": ehitis.get("ehitisePohiandmed", {}).get("suletud_netopind"),
         "ehitiseMaht": ehitis.get("ehitisePohiandmed", {}).get("mahtBruto"),
         "ehitisalunePind": ehitis.get("ehitisePohiandmed", {}).get("ehitisalunePind"),
-        "korgus": ehitis.get("ehitisePohiandmed", {}).get("korgus"),
         "suletud_netopind": ehitis.get("ehitisePohiandmed", {}).get("suletud_netopind"),
         "energiaKlass": None,
         "mahtBruto": ehitis.get("ehitisePohiandmed", {}).get("mahtBruto"),
         "maxKorrusteArv": ehitis.get("ehitisePohiandmed", {}).get("maxKorrusteArv"),
         "yldkasut_pind": ehitis.get("ehitisePohiandmed", {}).get("yldkasut_pind"),
-        "esmane_kasutus": None,
-        "taisaadress": None,
-        "lahiaadress": None
+        "esmane_kasutus": None
     }
 
     # Extract energiaKlass from "ehitiseEnergiamargised"
@@ -51,10 +47,8 @@ def extract_nested_values(data):
                     return result
         return None
 
-    # Perform deep search for the required fields
+    # Perform deep search for the required field
     extracted_values["esmane_kasutus"] = deep_search(data, "esmaneKasutus")
-    extracted_values["taisaadress"] = deep_search(data, "taisaadress")
-    extracted_values["lahiaadress"] = deep_search(data, "lahiaadress")
 
     return extracted_values
 
