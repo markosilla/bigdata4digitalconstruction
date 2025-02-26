@@ -56,12 +56,14 @@ for json_file in json_files:
         # Load polygon coordinates from JSON file
         polygon_coords = load_polygon_from_json(json_file)
 
+
+
         # Extract building code from filename
         building_code = os.path.basename(json_file).replace('.ehr.json', '')
         code, address = address_mapping.get(building_code, ("000", "Unknown Address"))
 
         print(f"Processing {json_file} for {building_code} {code} at {address}")
-
+        #print(f"Loaded polygon coordinates: {polygon_coords}", len(polygon_coords))
         # Calculate the angle needed to rotate the polygon
         angle = angle_to_rotate_polygon(polygon_coords)
 
@@ -76,8 +78,13 @@ for json_file in json_files:
         min_y_rotated = min(coord[1] for coord in rotated_polygon_coords)
         transformed_rotated_coords = [[x - min_x_rotated, y - min_y_rotated] for x, y in rotated_polygon_coords]
 
+
         # Plotting the transformed and rotated polygon
         x_transformed_rotated, y_transformed_rotated = zip(*transformed_rotated_coords)
+
+
+        print(f"Rotated polygon by transformed_rotated_coords {x_transformed_rotated} {y_transformed_rotated}")
+
         plt.figure()
         plt.fill(x_transformed_rotated, y_transformed_rotated, 'b', alpha=0.5)
         plt.plot(x_transformed_rotated, y_transformed_rotated, 'r-')
