@@ -1,65 +1,65 @@
+import pandas as pd
+import numpy as np
+
+# Define mapping to iterate in order
+buildings_map = {
+    "121363179": ("222", "Pärnu Rääma tn 9"),
+    "121363182": ("222", "Pärnu Rääma tn 9a"),
+    "121363185": ("222", "Pärnu Rääma tn 11"),
+    "103014811": ("223", "Pärnu Mai 39"),
+    "103015648": ("223", "Pärnu Mai 45"),
+    "103015786": ("223", "Pärnu Mai 43"),
+    "104018086": ("224", "Tartu Mõisavahe 35"),
+    "104018376": ("224", "Tartu Mõisavahe 38"),
+    "104023804": ("224", "Tartu Mõisavahe 42"),
+    "104018213": ("225", "Tartu Mõisavahe 43"),
+    "104019313": ("225", "Tartu Mõisavahe 47"),
+    "104036004": ("225", "Tartu Mõisavahe 39")
+}
+
+# Load data from CSV file
 def load_data(file_path):
-    data = []
-    headers = []
-    filenames = []
-    with open(file_path, 'r') as file:
-        headers = file.readline().strip().split(',')
-        for line in file:
-            values = line.strip().split(',')
-            filenames.append(values[0])  # Store filename as identifier
-            row = []
-            for i, val in enumerate(values[1:]):  # Exclude filename from numerical data
-                if headers[i + 1] == "energiaKlass":
-                    row.append({'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5}.get(val, 0))
-                else:
-                    try:
-                        row.append(float(val))
-                    except ValueError:
-                        row.append(0.0)
-            data.append(row)
-    return filenames, headers, data
+    df = pd.read_csv(file_path)
+    df["energiaKlass"] = df["energiaKlass"].map({"A": 1, "B": 2, "C": 3, "D": 4, "E": 5}).fillna(0)
+    filenames = df["filename"].astype(str).str.replace(".ehr.json", "", regex=False).tolist()
+    data = df.iloc[:, 1:].apply(pd.to_numeric, errors='coerce').fillna(0).values  # Convert numeric columns
+    return filenames, data
 
-def minmax_normalization(data, filenames, headers):
-    num_features = len(data[0])
-    min_vals = [min(row[i] for row in data) for i in range(num_features)]
-    max_vals = [max(row[i] for row in data) for i in range(num_features)]
-    
-    normalized_data = []
-    for i, row in enumerate(data):
-        normalized_row = [filenames[i]]
-        for j in range(num_features):
-            if max_vals[j] - min_vals[j] == 0:
-                normalized_row.append(0.0)  # Avoid division by zero
-            else:
-                normalized_value = (row[j] - min_vals[j]) / (max_vals[j] - min_vals[j])
-                normalized_row.append(normalized_value)
-        normalized_data.append(normalized_row)
-    
-    return [headers] + normalized_data
+# Normalize data using Min-Max Scaling
+def normalize_minmax(data):
+    min_vals = np.min(data, axis=0)
+    max_vals = np.max(data, axis=0)
+    return (data - min_vals) / (max_vals - min_vals + 1e-8)  # Avoid division by zero
 
-def calculate_euclidean_distance_matrix(data, filenames):
-    num_rows = len(data)
-    distance_matrix = [[0.0] * num_rows for _ in range(num_rows)]
-    
-    for i in range(num_rows):
-        for j in range(num_rows):
-            distance_matrix[i][j] = (sum((data[i][k] - data[j][k]) ** 2 for k in range(1, len(data[i])))) ** 0.5
-    
-    return [["filename"] + filenames] + [[filenames[i]] + distance_matrix[i] for i in range(num_rows)]
+# Compute Euclidean Distance Matrix
+def calculate_euclidean_distances(matrix):
+    size = len(matrix)
+    dist_matrix = np.zeros((size, size))
+    for i in range(size):
+        for j in range(size):
+            dist_matrix[i, j] = np.sqrt(np.sum((matrix[i] - matrix[j])**2))
+    return dist_matrix
 
-def print_matrix(matrix):
-    for row in matrix:
-        print(",".join(map(str, row)))
+# Load and process data
+file_path = "ehr_files/output.csv"
+filenames, data = load_data(file_path)
 
-# Example usage
-if __name__ == "__main__":
-    file_path = "ehr_files/output.csv"  # Replace with actual file path
-    filenames, headers, data = load_data(file_path)
-    
-    print("Min-Max Normalized Data Matrix:")
-    normalized_data = minmax_normalization(data, filenames, ["filename"] + headers)
-    print_matrix(normalized_data)
-    
-    print("\nEuclidean Distance Matrix:")
-    distance_matrix = calculate_euclidean_distance_matrix(normalized_data[1:], filenames)
-    print_matrix(distance_matrix)
+if len(data) == 0:
+    print("No valid data found.")
+    exit()
+
+# Normalize data
+normalized_data = normalize_minmax(data)
+
+# Compute Euclidean Distance Matrix
+distance_matrix = calculate_euclidean_distances(normalized_data)
+
+# Reorder results based on buildings_map
+ehr_codes = [code for code in buildings_map.keys() if code in filenames]
+distance_df = pd.DataFrame(distance_matrix, index=filenames, columns=filenames)
+distance_df = distance_df.loc[ehr_codes, ehr_codes]
+distance_df = distance_df.reindex(index=ehr_codes, columns=ehr_codes)
+
+# Print Euclidean Distance Matrix to console
+print("\nEuclidean Distance Matrix:")
+print(distance_df.to_csv(index=True))
