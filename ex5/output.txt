@@ -1,0 +1,5 @@
+save_act_YES <- income_39883.7_51506.9 (11.8333, 100)
+married_YES <- children_0 sex_FEMALE pep_NO mortgage_NO (10.6667, 98.4375)
+married_YES <- children_0 pep_NO mortgage_NO save_act_YES (12.3333, 98.6486)
+married_YES <- children_0 pep_NO mortgage_NO current_act_YES (13.6667, 97.561)
+married_YES <- children_0 pep_NO mortgage_NO (17.8333, 97.1963)
