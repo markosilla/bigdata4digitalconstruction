@@ -25,11 +25,9 @@ df.to_csv(csv_file, index=False)
 
 print(f"Converted {xlsx_file} → {csv_file}")
 
-data = pd.read_csv(csv_file)  # Loeb CSV-faili pandas DataFrame'i.
+data = pd.read_csv(csv_file)
 
-
-# Set prediction target
-target_column = 'Energy_Certificate_Class'
+target_column = 'Liftid'
 
 # Drop columns you don’t need or that leak the target
 data.drop(columns=['ID', 'EHR_kood', 'TaisAadress', 'Maakond', 'KOV', 'KOV_voi_LinnaOsa', 'Tänav_Hoone_Nr'], inplace=True, errors='ignore')
@@ -83,9 +81,9 @@ print(f'Accuracy of {clf.__class__.__name__}: {accuracy:.2f}')  # Prindib välja
 
 
 ##########
-print("\n--- Sample Predictions (Energy Certificate Class) ---")
+print("\n--- Liftid > 0 ---")
 shown = 0
-max_examples = 10
+max_examples = 10  # mitu näidet näidata maksimaalselt
 
 X_test_df = pd.DataFrame(X_test, columns=X.columns)
 X_test_df = X_test_df.reset_index(drop=True)
@@ -94,14 +92,18 @@ y_pred_reset = pd.Series(y_pred).reset_index(drop=True)
 
 for i in range(len(y_test_reset)):
     actual = label_encoder.inverse_transform([y_test_reset[i]])[0]
-    predicted = label_encoder.inverse_transform([y_pred_reset[i]])[0]
-    print(f"\nNäide {shown + 1}:")
-    # print(X_test_df.iloc[i])  # optionally uncomment this if you want to see input features
-    print(f"Tegelik energiamärgis: {actual}")
-    print(f"Ennustatud energiamärgis: {predicted}")
-    shown += 1
-    if shown >= max_examples:
-        break
+    if actual > 0:
+        predicted = label_encoder.inverse_transform([y_pred_reset[i]])[0]
+        print(f"\nNäide {shown + 1}:")
+        print(X_test_df.iloc[i])
+        print(f"Tegelik arv: {actual}")
+        print(f"Ennustatud arv: {predicted}")
+        shown += 1
+        if shown >= max_examples:
+            break
+
+if shown == 0:
+    print("Ühtegi näidet, kus tegelik arv oleks > 0, ei leitud.")
 ##########
 
 
