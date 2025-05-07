@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const fullHash = process.env.VERCEL_GIT_COMMIT_SHA || "dev";
+const fullHash = process.env.VERCEL_GIT_COMMIT_SHA || "{{GIT_HASH}}";
 const hash = fullHash.substring(0, 7);
 const filePath = "src/index.html";
 const html = fs.readFileSync(filePath, "utf8");

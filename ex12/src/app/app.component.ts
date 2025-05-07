@@ -23,6 +23,8 @@ export class AppComponent {
         .then(res => res.text())
         .then(csv => {
           const parsed = Papa.parse(csv, { skipEmptyLines: true });
+
+          console.log(parsed.data);
           const rows = parsed.data as string[][];
 
           const dataStart = rows.findIndex(row => /^\d{2}\.\d{2}\.\d{4}/.test(row[0]));
@@ -39,6 +41,7 @@ export class AppComponent {
 
           this.prepareChartData(data);
         });
+
   }
 
   parseDate(dateStr: string): Date {
