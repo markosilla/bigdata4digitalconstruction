@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<h2>{{ title }}</h2>
 
 <div *ngIf="chartOptions">
   <apx-chart
@@ -6,5 +6,6 @@
     [chart]="chartOptions.chart"
     [plotOptions]="chartOptions.plotOptions"
     [dataLabels]="chartOptions.dataLabels"
+    [xaxis]="chartOptions.xaxis"
   ></apx-chart>
 </div>

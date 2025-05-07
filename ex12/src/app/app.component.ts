@@ -19,52 +19,64 @@ export class AppComponent {
   }
 
   loadCSV() {
-    fetch('assets/706d79f84d75abd81744048179.csv')
+    fetch('/706d79f84d75abd81744048179.csv')
         .then(res => res.text())
         .then(csv => {
           const parsed = Papa.parse(csv, { skipEmptyLines: true });
-
-          console.log(parsed.data);
           const rows = parsed.data as string[][];
 
+          // Find where the actual data starts
           const dataStart = rows.findIndex(row => /^\d{2}\.\d{2}\.\d{4}/.test(row[0]));
           const validRows = rows.slice(dataStart).filter(r => r.length >= 2);
 
+          // Parse and convert the data
           const data = validRows.map(row => {
             const [timestamp, rawConsumption] = row;
             const date = this.parseDate(timestamp);
             const day = date.toISOString().split('T')[0];
-            const hour = date.toTimeString().slice(0, 5);
             const value = parseFloat(rawConsumption.replace(',', '.'));
-            return { Day: day, Hour: hour, Consumption: value };
+            return { Day: day, Consumption: value };
           });
 
           this.prepareChartData(data);
         });
-
   }
 
   parseDate(dateStr: string): Date {
-    const [d, m, rest] = dateStr.split('.');
-    const [y, h] = [rest.slice(0, 4), rest.slice(5)];
-    return new Date(`${y}-${m}-${d}T${h}:00`);
+    const [datePart, timePart] = dateStr.split(' ');
+    const [day, month, year] = datePart.split('.');
+    return new Date(`${year}-${month}-${day}T${timePart}:00`);
   }
 
-  prepareChartData(data: { Day: string; Hour: string; Consumption: number }[]) {
-    const seriesMap: { [key: string]: { x: string; y: number }[] } = {};
+  prepareChartData(data: { Day: string; Consumption: number }[]) {
+    const dailyTotals: Record<string, number> = {};
 
+    // Sum up daily totals
     for (const row of data) {
-      if (!seriesMap[row.Day]) {
-        seriesMap[row.Day] = [];
-      }
-      seriesMap[row.Day].push({ x: row.Hour, y: row.Consumption });
+      if (!dailyTotals[row.Day]) dailyTotals[row.Day] = 0;
+      dailyTotals[row.Day] += row.Consumption;
     }
 
-    const series = Object.entries(seriesMap).map(([name, data]) => ({ name, data }));
+    // Group by month
+    const monthMap: { [month: string]: { x: string; y: number }[] } = {};
+
+    Object.entries(dailyTotals).forEach(([day, total]) => {
+      const date = new Date(day);
+      const month = date.toLocaleString('default', { month: 'short', year: 'numeric' });
+      const dayOfMonth = date.getDate().toString();
+
+      if (!monthMap[month]) monthMap[month] = [];
+      monthMap[month].push({ x: dayOfMonth, y: parseFloat(total.toFixed(3)) });
+    });
+
+    const series = Object.entries(monthMap).map(([name, data]) => ({
+      name,
+      data
+    }));
 
     this.chartOptions = {
       chart: {
-        height: 350,
+        height: 450,
         type: "heatmap"
       },
       plotOptions: {
@@ -72,14 +84,20 @@ export class AppComponent {
           shadeIntensity: 0.5,
           colorScale: {
             ranges: [
-              { from: 0, to: 0.5, color: "#00A100", name: "Low" },
-              { from: 0.5, to: 1.0, color: "#FFB200", name: "Medium" },
-              { from: 1.0, to: 2.0, color: "#FF0000", name: "High" }
+              { from: 0, to: 2, color: "#e0f7fa", name: "Low" },
+              { from: 2, to: 5, color: "#80deea", name: "Medium" },
+              { from: 5, to: 10, color: "#26c6da", name: "High" },
+              { from: 10, to: 9999, color: "#006064", name: "Very High" }
             ]
           }
         }
       },
-      dataLabels: { enabled: false },
+      dataLabels: {
+        enabled: false
+      },
+      xaxis: {
+        title: { text: "Day of Month" }
+      },
       series: series
     };
   }
