@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const fullHash = process.env.VERCEL_GIT_COMMIT_SHA || "{{GIT_HASH}}";
-const hash = fullHash.substring(0, 7);
+const hash = fullHash.substring(0, 13);
 const filePath = "src/index.html";
 const html = fs.readFileSync(filePath, "utf8");
 const result = html.replace("{{GIT_HASH}}", hash);
