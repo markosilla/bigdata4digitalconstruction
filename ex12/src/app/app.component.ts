@@ -1,5 +1,5 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
   ApexAxisChartSeries,
   ApexChart,
@@ -32,7 +32,7 @@ export type ChartOptions = {
       </h1>
 
       <p>
-        <strong>Selgitus:</strong> Elektritarbimise heatmap <code>706d79f84d75abd81744048179.csv</code> andmestiku põhjal — joonistuvad välja aastaaegadest kui ka nädalavahetuse päevadest sõltuvad mustrid.
+        <strong>Selgitus:</strong> Elektritarbimise heatmap <code>706d79f84d75abd81744048179.csv</code> andmestiku põhjal — joonistuvad välja aastaaegadest kui ka nädalavahetuse päevadest sõltuvad mustrid(tõenäoliselt saunakerise kasutus on tihedam K, R, L, P).
       </p>
       <div id="chart" style="max-width: 100%; position: relative;">
         <apx-chart
@@ -54,7 +54,6 @@ export class AppComponent implements OnInit {
   @ViewChild("chart") chart!: ChartComponent;
   public chartOptions: ChartOptions;
 
-  // Make hourlyMap static so it's accessible to the tooltip function
   private static hourlyMap: Record<string, string> = {};
 
   constructor() {
@@ -66,15 +65,11 @@ export class AppComponent implements OnInit {
       dataLabels: {
         enabled: false
       } as ApexDataLabels,
-      plotOptions: {
-
-      } as ApexPlotOptions,
-      tooltip: {
-        // Initialize with empty settings, will be set in prepareChartData
-      } as ApexTooltip,
+      plotOptions: {} as ApexPlotOptions,
+      tooltip: {} as ApexTooltip,
       xaxis: {
         labels: {
-          show: false, // Hide x-axis labels by default
+          show: false,
           style: { fontSize: '14px' }
         }
       } as ApexXAxis,
@@ -93,55 +88,42 @@ export class AppComponent implements OnInit {
     fetch('/706d79f84d75abd81744048179.csv')
         .then(res => res.text())
         .then(csv => {
-          // Parse with custom delimiter based on the format
           const parsed = Papa.parse(csv, {
             skipEmptyLines: true,
-            delimiter: ';' // Set explicit delimiter as semicolon
+            delimiter: ';'
           });
 
           const rows = parsed.data as string[][];
 
-          // Find the data start by looking for date pattern
           const dataStart = rows.findIndex(row =>
               row.length >= 2 && /^\d{2}\.\d{2}\.\d{4}\s\d{2}:\d{2}$/.test(row[0])
           );
 
           const validRows = rows.slice(dataStart).filter(r => r.length >= 2);
-
-          // Create a map to directly store hourly values by day and hour
           const directValues: Map<string, Map<number, string>> = new Map();
 
-          // Process each row and store the original value
           validRows.forEach(row => {
             const [timestamp, consumption] = row;
-
-            // Extract date parts manually
             const [datePart, timePart] = timestamp.split(' ');
             const [hourPart] = timePart.split(':');
             const hour = parseInt(hourPart, 10);
 
-            // Create a clean day key (YYYY-MM-DD)
             const [day, month, year] = datePart.split('.');
             const dayKey = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 
-            // Store the direct value
             if (!directValues.has(dayKey)) {
               directValues.set(dayKey, new Map());
             }
             directValues.get(dayKey)!.set(hour, consumption);
           });
 
-          // Now convert the direct data to our processing format
           const processedData = [];
 
           for (const [day, hourMap] of directValues.entries()) {
             const date = new Date(day);
 
-            let dailyTotal = 0;
             for (const [hour, valueStr] of hourMap.entries()) {
-              // Calculate daily total for the heatmap
               const value = parseFloat(valueStr.replace(',', '.'));
-              dailyTotal += value;
 
               processedData.push({
                 day,
@@ -160,7 +142,6 @@ export class AppComponent implements OnInit {
         });
   }
 
-  // Format integer ranges for the color scale
   formatIntegerRange(value: number): string {
     return Math.round(value).toString();
   }
@@ -169,26 +150,17 @@ export class AppComponent implements OnInit {
       data: { day: string; date: Date; hour: number; value: number; displayValue: string }[],
       directValues: Map<string, Map<number, string>>
   ) {
-    // Calculate daily totals without processing the hourly values
     const dailyTotals: Record<string, number> = {};
     const hourlyBreakdown: Record<string, Array<string>> = {};
-    AppComponent.hourlyMap = {}; // reset before rebuilding
+    AppComponent.hourlyMap = {};
 
-    // First, create an array of unique days
     const uniqueDays = [...new Set(data.map(item => item.day))];
 
-    // For each day, calculate the daily total and build the hourly breakdown
     uniqueDays.forEach(day => {
-      // Get all hours for this day
       const dayData = data.filter(item => item.day === day);
-
-      // Calculate daily total
       dailyTotals[day] = dayData.reduce((total, item) => total + item.value, 0);
 
-      // Create hourly breakdown with DIRECT values
       hourlyBreakdown[day] = Array(24).fill('0,000');
-
-      // Fill in direct values from the CSV
       const hourMap = directValues.get(day);
       if (hourMap) {
         for (let hour = 0; hour < 24; hour++) {
@@ -208,40 +180,30 @@ export class AppComponent implements OnInit {
     const stepSize = range / colorSteps;
     const colorScale = ["#00A100", "#128FD9", "#FFB200", "#FF0000"];
 
-    // Create integer-based ranges
     const autoRanges = Array.from({ length: colorSteps }, (_, i) => {
       const from = min + i * stepSize;
       const to = i === colorSteps - 1 ? max + 1 : from + stepSize;
       return {
-        from: from,
-        to: to,
+        from,
+        to,
         color: colorScale[i],
         name: `${this.formatIntegerRange(from)}–${this.formatIntegerRange(to)}`
       };
     });
 
-    // Estonian weekday abbreviations
-    const weekdayLabels = ["P", "E", "T", "K", "N", "R", "L"];
-    const monthMap: { [month: string]: { x: string; y: number; weekday: string }[] } = {};
+    const monthMap: { [month: string]: { x: string; y: number }[] } = {};
 
     Object.entries(dailyTotals).forEach(([day, total]) => {
       const date = new Date(day);
-      const weekday = date.getDay(); // 0 = Sunday
-
-      // Use only weekday abbreviation (E, T, K, N, R, L, P)
-      const estDay = weekdayLabels[weekday];
+      const weekdayLabels = ["P", "E", "T", "K", "N", "R", "L"];
+      const estDay = weekdayLabels[date.getDay()];
       const month = date.toLocaleString('default', { month: 'short', year: 'numeric' });
 
-      // Use only the weekday as label
-      const label = estDay;
-
+      const fullDateLabel = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
       const hours = hourlyBreakdown[day];
+      const tooltipLabel = `${estDay}, ${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 
-      // For tooltip, use complete date info
-      const tooltipLabel = `${estDay}, ${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`;
-
-      // Create a table-like structure with DIRECT values from CSV
-      AppComponent.hourlyMap[`${month}|${label}`] = `
+      AppComponent.hourlyMap[fullDateLabel] = `
         <table style="width:100%; font-size:12px; border-collapse: collapse;">
           <tr>
             <td colspan="2" style="text-align:center; padding-bottom: 8px; font-weight: bold;">
@@ -256,18 +218,17 @@ export class AppComponent implements OnInit {
           `<tr>
               <td style="padding: 2px 0">${hour.toString().padStart(2, '0')}:00</td>
               <td style="text-align:right; padding: 2px 0">${val}</td>
-            </tr>`
-      ).join('')}
+            </tr>`).join('')}
         </table>
       `;
 
       if (!monthMap[month]) {
         monthMap[month] = [];
       }
+
       monthMap[month].push({
-        x: label,
-        y: total,
-        weekday: estDay  // Store the weekday abbreviation
+        x: fullDateLabel,
+        y: total
       });
     });
 
@@ -276,27 +237,20 @@ export class AppComponent implements OnInit {
       data
     }));
 
-    // Updated tooltipCustom function - larger with no scrollbars
-    const tooltipCustom = function(info: any) {
-      const seriesIndex = info.seriesIndex;
-      const dataPointIndex = info.dataPointIndex;
-      const w = info.w;
-
-      const point = w.config.series[seriesIndex].data[dataPointIndex];
+    const tooltipCustom = function (info: any) {
+      const point = info.w.config.series[info.seriesIndex].data[info.dataPointIndex];
       const label = point.x;
-      const seriesName = w.config.series[seriesIndex].name;
       const total = point.y;
 
-      const key = `${seriesName}|${label}`;
-      const hourly = AppComponent.hourlyMap[key] || 'Andmed puuduvad';
+      const tooltipDate = new Date(label);
+      const weekdayLabels = ["P", "E", "T", "K", "N", "R", "L"];
+      const estDay = weekdayLabels[tooltipDate.getDay()];
+      const tooltipLabel = `${estDay}, ${tooltipDate.getDate()}.${tooltipDate.getMonth() + 1}.${tooltipDate.getFullYear()}`;
 
-      // Format total with comma decimal separator
-      let formattedTotal = String(total);
-      if (typeof total === 'number') {
-        formattedTotal = total.toFixed(3).replace('.', ',');
-      }
+      const hourly = AppComponent.hourlyMap[label] || 'Andmed puuduvad';
 
-      // Create a larger tooltip without scrollbars
+      let formattedTotal = typeof total === 'number' ? total.toFixed(3).replace('.', ',') : String(total);
+
       return `
         <div style="
           padding: 12px;
@@ -306,11 +260,9 @@ export class AppComponent implements OnInit {
           box-shadow: 0 2px 8px rgba(0,0,0,0.15);
           overflow: visible;
         ">
-          <div style="
-            margin-bottom: 10px;
-            font-size: 13px;
-          ">Päeva kogutarbimine: <strong>${formattedTotal}</strong></div>
-
+          <div style="margin-bottom: 10px; font-size: 13px;">
+            Päeva kogutarbimine: <strong>${formattedTotal}</strong>
+          </div>
           <div style="max-height: none; overflow: visible;">
             ${hourly}
           </div>
@@ -318,12 +270,11 @@ export class AppComponent implements OnInit {
       `;
     };
 
-    // Update chart options with the new data
     this.chartOptions = {
       chart: {
         height: 900,
         type: 'heatmap',
-        toolbar: { show: false}
+        toolbar: { show: false }
       } as ApexChart,
       plotOptions: {
         heatmap: {
@@ -336,45 +287,28 @@ export class AppComponent implements OnInit {
         }
       } as ApexPlotOptions,
       dataLabels: {
-        enabled: true, // Enable at top level
-        formatter: function(val: any, opts: any) {
-          // The Estonian weekday abbreviation
+        enabled: true,
+        formatter: function (val: any, opts: any) {
+          const pointDateStr = opts.w.config.series[opts.seriesIndex].data[opts.dataPointIndex].x;
+          const pointDate = new Date(pointDateStr);
           const weekdayLabels = ["P", "E", "T", "K", "N", "R", "L"];
-          const seriesName = opts.w.config.series[opts.seriesIndex].name;
-          const pointLabel = opts.w.config.series[opts.seriesIndex].data[opts.dataPointIndex].x;
-          const key = `${seriesName}|${pointLabel}`;
-
-          // Return the weekday directly
-          return pointLabel;
+          return weekdayLabels[pointDate.getDay()];
         },
         style: {
-          colors: ['#000'], // Black text
+          colors: ['#000'],
           fontSize: '14px',
           fontWeight: 'bold'
         }
       } as ApexDataLabels,
       tooltip: {
         custom: tooltipCustom,
-        // Make tooltip follow cursor completely
         followCursor: true,
-        // Hide X indicator
-        x: {
-          show: false
-        },
-        // No fixed position
-        fixed: {
-          enabled: false
-        },
-        // Hide marker
-        marker: {
-          show: false
-        }
+        x: { show: false },
+        fixed: { enabled: false },
+        marker: { show: false }
       } as ApexTooltip,
       xaxis: {
-        // Remove x-axis title and labels
-        labels: {
-          show: false  // Hide labels
-        }
+        labels: { show: false }
       } as ApexXAxis,
       series: series as unknown as ApexAxisChartSeries
     };
