@@ -27,8 +27,13 @@ export type ChartOptions = {
   imports: [CommonModule, NgApexchartsModule],
   template: `
     <div style="width: 100%; margin: 0 auto; position: relative; padding: 150px 20px 20px;">
-      <h1>Elektritarbimise heatmap</h1>
+      <h1>
+        1) Võta elektritarbimise aegridade andmebaasist (vt. Ülesanne 10) suvaline 1 andmestik ning proovi huvitaval moel visualiseerida neid andmeid nii, et saja päeva puhul hakkaksid "korduvad mustrid" "ilusti silma".
+      </h1>
 
+      <p>
+        <strong>Selgitus:</strong> Elektritarbimise heatmap <code>706d79f84d75abd81744048179.csv</code> andmestiku põhjal — joonistuvad välja aastaaegadest kui ka nädalavahetuse päevadest sõltuvad mustrid.
+      </p>
       <div id="chart" style="max-width: 100%; position: relative;">
         <apx-chart
             [series]="chartOptions.series"
@@ -217,7 +222,7 @@ export class AppComponent implements OnInit {
 
     // Estonian weekday abbreviations
     const weekdayLabels = ["P", "E", "T", "K", "N", "R", "L"];
-    const monthMap: { [month: string]: { x: string; y: number }[] } = {};
+    const monthMap: { [month: string]: { x: string; y: number; weekday: string }[] } = {};
 
     Object.entries(dailyTotals).forEach(([day, total]) => {
       const date = new Date(day);
@@ -261,7 +266,8 @@ export class AppComponent implements OnInit {
       }
       monthMap[month].push({
         x: label,
-        y: total
+        y: total,
+        weekday: estDay  // Store the weekday abbreviation
       });
     });
 
@@ -316,7 +322,8 @@ export class AppComponent implements OnInit {
     this.chartOptions = {
       chart: {
         height: 900,
-        type: 'heatmap'
+        type: 'heatmap',
+        toolbar: { show: false}
       } as ApexChart,
       plotOptions: {
         heatmap: {
@@ -329,7 +336,22 @@ export class AppComponent implements OnInit {
         }
       } as ApexPlotOptions,
       dataLabels: {
-        enabled: false
+        enabled: true, // Enable at top level
+        formatter: function(val: any, opts: any) {
+          // The Estonian weekday abbreviation
+          const weekdayLabels = ["P", "E", "T", "K", "N", "R", "L"];
+          const seriesName = opts.w.config.series[opts.seriesIndex].name;
+          const pointLabel = opts.w.config.series[opts.seriesIndex].data[opts.dataPointIndex].x;
+          const key = `${seriesName}|${pointLabel}`;
+
+          // Return the weekday directly
+          return pointLabel;
+        },
+        style: {
+          colors: ['#000'], // Black text
+          fontSize: '14px',
+          fontWeight: 'bold'
+        }
       } as ApexDataLabels,
       tooltip: {
         custom: tooltipCustom,
