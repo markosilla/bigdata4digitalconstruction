@@ -171,7 +171,7 @@ export class HeatmapChartComponent implements OnInit {
       const hourly = HeatmapChartComponent.hourlyMap[label] || 'Andmed puuduvad';
 
       return `
-        <div style="padding: 12px; width: 150px; background: #fff; border-radius: 5px;">
+        <div style="padding: 12px; width: 170px; background: #fff; border-radius: 5px;">
           <div style="margin-bottom: 10px;">Päeva kogutarbimine: <strong>${formattedTotal}</strong></div>
           ${hourly}
         </div>
