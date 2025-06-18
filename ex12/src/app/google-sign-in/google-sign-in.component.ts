@@ -64,6 +64,10 @@ export class GoogleSignInComponent implements OnInit {
     //     }
     //   });
 
+    if (decoded.email !== "marko.silla@gmail.com") {
+      alert("Unauthorized 401");
+      return;
+    }
 
 
     console.log(decoded);

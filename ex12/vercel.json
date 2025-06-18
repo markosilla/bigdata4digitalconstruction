@@ -1,0 +1,14 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy-Report-Only",
+          "value": "default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client https://vercel.live; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://vercel.live; frame-src 'self' https://accounts.google.com/gsi/ https://vercel.live; connect-src 'self' https://accounts.google.com/gsi/ https://vercel.live; img-src https://vercel.live https://vercel.com data: blob:"
+        }
+      ]
+    }
+  ]
+}
+
