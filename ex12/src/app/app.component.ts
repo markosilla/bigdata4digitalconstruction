@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {GoogleSignInComponent} from './google-sign-in/google-sign-in.component';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
-    GoogleSignInComponent,
+    RouterOutlet,
   ],
   template: `
     <div class="page-container">
-      <app-google-sign-in></app-google-sign-in>
+      <router-outlet></router-outlet>
     </div>
   `,
   styles: [`
