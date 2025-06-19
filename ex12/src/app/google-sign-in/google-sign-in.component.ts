@@ -1,7 +1,8 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
 import {AuthService} from '../auth.service';
 import {Router} from '@angular/router';
 import {jwtDecode} from 'jwt-decode';
+
 declare const google: any;
 
 @Component({

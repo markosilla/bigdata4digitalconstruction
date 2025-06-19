@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   imports: [
     CommonModule,
     HeatmapChartComponent,
-    MultiFileLineChartComponent // ✅ make sure it's in the imports array
+    MultiFileLineChartComponent
   ],
   template: `
     <button (click)="logout()">Logout</button>
