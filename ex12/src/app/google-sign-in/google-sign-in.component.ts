@@ -3,6 +3,22 @@ import {AuthService} from '../auth.service';
 import {Router} from '@angular/router';
 import {jwtDecode} from 'jwt-decode';
 
+
+
+
+
+
+# REACTI põhine nextAuth.js --- backendi/frontenti rakendus,
+# Passport -sitikas rakenduses
+
+
+
+
+
+
+
+
+
 declare const google: any;
 
 @Component({
